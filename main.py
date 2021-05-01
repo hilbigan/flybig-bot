@@ -112,7 +112,7 @@ class DiscordClient(discord.Client):
         if message.author == self.user:
             return
         print("Message from", message.author, ":", message.content)
-        if message.content.startswith("!k"):
+        if message.content.startswith("!k "):
             try:
                 result = await parse_command(message.channel, message.author, message.content[3: ])
                 if result is not None:
